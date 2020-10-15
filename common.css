@@ -1,0 +1,176 @@
+/* GLOBAL STYLING */
+
+html,
+body {
+  min-height: 100%;
+}
+
+/* background */
+body {
+  background: rgb(137, 207, 228);
+  background: linear-gradient(
+    225deg,
+    rgba(137, 207, 228, 1) 0%,
+    rgba(94, 144, 220, 1) 42%,
+    rgba(81, 48, 210, 1) 100%
+  );
+  background: url("./res/bottle-padded.svg") 0 0 / 100px 100px,
+    linear-gradient(
+      225deg,
+      rgba(137, 207, 228, 1) 0%,
+      rgba(94, 144, 220, 1) 42%,
+      rgba(81, 48, 210, 1) 100%
+    );
+}
+
+/* font */
+body {
+  font-family: "SF Pro Display";
+  color: #1b2130;
+}
+
+/* file inputs - expect to style a label that is linked to a hidden input */
+input[type="file"] {
+  display: none;
+}
+
+/* COMMON UTILITIES */
+
+.hidden {
+  display: none !important;
+}
+
+/* COMMON COMPONENTS */
+
+/* Non-scollable centered white box with rounded corners */
+.lqd-box {
+  /* centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* sizing */
+  max-width: 400px;
+  max-height: 80%;
+  overflow: hidden;
+
+  /* appearance */
+  background-color: white;
+  border-radius: 25px;
+
+  padding: 20px 30px 5px 30px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* Top-left step indicator */
+.lqd-box__step {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.lqd-box__step__icon {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.lqd-box__step__text {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.lqd-box__header {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+
+  margin-bottom: 20px;
+}
+
+.lqd-box__text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.lqd-box__subtext {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.lqd-box__bottom-btn {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+/* LQD button with a gradient */
+.lqd-button {
+  display: inline-block;
+
+  border: none;
+  border-radius: 15px;
+  padding: 15px 32px;
+  min-width: 120px;
+
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+
+  background: rgb(30, 111, 170);
+  background: linear-gradient(
+    45deg,
+    rgba(30, 111, 170, 1) 0%,
+    rgba(96, 64, 224, 1) 100%
+  );
+}
+
+.lqd-button--disabled {
+  background: #979797;
+}
+
+/* Text accented with color */
+.text-highlight {
+  color: #2b4fab;
+}
+
+/* File input */
+.lqd-file-input {
+  font-size: 18px;
+  text-decoration: underline;
+
+  background: rgb(30, 111, 170);
+  background: linear-gradient(
+    225deg,
+    rgba(30, 111, 170, 1) 0%,
+    rgba(96, 64, 224, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  width: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.lqd-file-input > :not(:last-child) {
+  margin-right: 5px;
+}
+
+.lqd-file-input__icon {
+  width: 20px;
+  height: 20px;
+}
