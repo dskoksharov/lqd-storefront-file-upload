@@ -1,0 +1,36 @@
+.password-display {
+  padding: 15px;
+  border-radius: 10px;
+
+  background-color: rgb(151, 151, 151, 0.23);
+
+  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.password-display__text {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: rgb(0, 0, 0, 0.46);
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+  text-transform: uppercase;
+}
+
+.success-text {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.failure-text {
+  font-size: 40px;
+  font-weight: 500;
+
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+}
