@@ -3,15 +3,78 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Upload Status</title>
+    <title data-translate="title_status"></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="./favicon.png">
+    <link rel="icon" href="./favicon.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="fonts.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="common.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="status.css" />
     <script src="https://unpkg.com/i18next@19.8.2/dist/umd/i18next.min.js"></script>
+    <script src="translations.js"></script>
     <script src="constants.js"></script>
     <script src="status.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- step 2 -->
+    <div class="lqd-box" id="box_step2">
+      <div class="lqd-box__step">
+        <img class="lqd-box__step__icon" src="./res/lqd-logo.svg" />
+        <span class="lqd-box__step__text">3/4</span>
+      </div>
+
+      <h1 class="lqd-box__header" data-translate="step2"></h1>
+      <p class="lqd-box__text" data-translate="step2_text"></p>
+      <p class="lqd-box__subtext" data-translate="step2_subtext"></p>
+
+      <div class="password-display">
+        <span class="password-display__text" id="password_display"></span>
+      </div>
+    </div>
+
+    <!-- step 3 - success -->
+    <div class="lqd-box hidden" id="box_step3_success">
+      <div class="lqd-box__step">
+        <img class="lqd-box__step__icon" src="./res/lqd-logo.svg" />
+        <span class="lqd-box__step__text">4/4</span>
+      </div>
+
+      <h1 class="lqd-box__header" data-translate="step3"></h1>
+      <p class="lqd-box__text success-text">
+        <span class="text-highlight" id="line_count">69/42</span>
+        <span data-translate="step3_linecount"></span>
+      </p>
+      <!-- TODO expandable table -->
+
+      <p class="lqd-box__subtext" data-translate="step3_subtext_success"></p>
+      <button
+        class="lqd-box__bottom-btn lqd-button"
+        data-translate="step3_next"
+        onclick="start_over()"
+      ></button>
+    </div>
+
+    <!-- step 3 - failure -->
+    <div class="lqd-box hidden" id="box_step3_failure">
+      <div class="lqd-box__step">
+        <img class="lqd-box__step__icon" src="./res/lqd-logo.svg" />
+        <span class="lqd-box__step__text">4/4</span>
+      </div>
+
+      <h1 class="lqd-box__header" data-translate="step3"></h1>
+      <p
+        class="lqd-box__text text-highlight failure-text"
+        data-translate="step3_failure"
+      ></p>
+      <p
+        class="lqd-box__subtext"
+        data-translate="step3_subtext_failure"
+        id="email_text"
+      ></p>
+      <button
+        class="lqd-box__bottom-btn lqd-button"
+        data-translate="step3_next"
+        onclick="start_over()"
+      ></button>
+    </div>
+  </body>
 </html>
