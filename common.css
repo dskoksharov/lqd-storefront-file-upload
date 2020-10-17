@@ -149,6 +149,16 @@ input[type="file"] {
   font-size: 18px;
   text-decoration: underline;
 
+  width: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* The primary label inside styled file input that shows description text */
+.lqd-file-input label.lqd-file-input__main-label {
+  /* gradient text */
   background: rgb(30, 111, 170);
   background: linear-gradient(
     225deg,
@@ -158,12 +168,19 @@ input[type="file"] {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
 
-  width: fit-content;
+/* A second label inside styled file input that is meant to show  currently selected file path */
+.lqd-file-input label.lqd-file-input__file-path {
+  color: #1b2130;
+  text-decoration: none;
 
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  /* don't display by default */
+  display: none;
+}
+
+.lqd-file-input label:hover {
+  cursor: pointer;
 }
 
 .lqd-file-input > :not(:last-child) {

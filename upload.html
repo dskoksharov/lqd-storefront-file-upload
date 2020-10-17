@@ -22,7 +22,7 @@
       </div>
 
       <h1 class="lqd-box__header" data-translate="step0"></h1>
-      <p class="lqd-box__text" data-translate="step0_text"></p>
+      <p class="lqd-box__text" data-translate="step0_text" id="email_text"></p>
       <p class="lqd-box__subtext" data-translate="step0_subtext"></p>
       <button
         class="lqd-box__bottom-btn lqd-button"
@@ -43,7 +43,17 @@
 
       <div class="lqd-file-input">
         <img class="lqd-file-input__icon" src="./res/add.svg" />
-        <label for="file_input" data-translate="step1_file"></label>
+        <label
+          class="lqd-file-input__main-label"
+          for="file_input"
+          data-translate="step1_file"
+          id="file_input_label"
+        ></label>
+        <label
+          class="lqd-file-input__file-path"
+          for="file_input"
+          id="file_path"
+        ></label>
         <input
           id="file_input"
           type="file"
@@ -59,6 +69,7 @@
         class="lqd-box__bottom-btn lqd-button lqd-button--disabled"
         id="upload_button"
         data-translate="step1_next"
+        onclick="upload()"
       ></button>
     </div>
   </body>
