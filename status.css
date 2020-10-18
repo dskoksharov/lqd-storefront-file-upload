@@ -25,6 +25,9 @@
 .success-text {
   font-size: 30px;
   font-weight: 500;
+
+  margin-block-start: 10px;
+  margin-block-end: 10px;
 }
 
 .failure-text {
@@ -33,4 +36,17 @@
 
   margin-block-start: 10px;
   margin-block-end: 10px;
+}
+
+.results-table {
+  width: 100%;
+  text-align: left;
+
+  min-height: 40vh;
+  overflow-y: auto;
+}
+
+.results-table__status-icon {
+  width: 16px;
+  height: 16px;
 }

@@ -6,7 +6,7 @@ document.addEventListener("document_translated", () => {
   const anchor = document.createElement("a");
   anchor.classList.add("text-highlight");
   anchor.textContent = email;
-  anchor.setAttribute("href", "mailto:" + email);
+  anchor.setAttribute("href", `mailto:${email}`);
 
   const textElem = document.getElementById("email_text");
   const textAround = textElem.textContent.split(email);
@@ -58,7 +58,7 @@ function step0_next() {
  * Upload file and redirect to status page
  */
 async function upload() {
-  const postFileUrl = window.LQDGlobalConf.backendUrl + "/stores/stock";
+  const postFileUrl = `${window.LQDGlobalConf.backendUrl}/stores/stock`;
 
   // assert - a file is selected
   const file = document.getElementById("file_input").files[0];
@@ -67,25 +67,25 @@ async function upload() {
   // formData.append("type", file.type);
 
   const headers = new Headers();
-  headers.append("Content-Type", "multipart/form-data");
   headers.append("Accept", "application/json");
 
   const resp = await fetch(postFileUrl, {
     method: "POST",
     body: formData,
     headers: headers,
+    mode: "cors",
   });
+
+  const data = await resp.json();
 
   if (!resp.ok) {
     // assert - i18next is initialized
-    alert(i18next.t("upload_error"));
+    alert(`${i18next.t("upload_error")}: ${data.message}`);
     return;
   }
 
-  const data = await resp.json();
   const password = data.password;
 
-  console.log("Got response", data);
-  // TODO redirect to status
-  // location.assign
+  // redirect to status
+  location.assign(`status.html?password=${password}`);
 }

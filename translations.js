@@ -40,11 +40,13 @@ window.addEventListener("DOMContentLoaded", async () => {
           // step 3
           step3: "Step 3",
           step3_linecount: "lines uploaded",
-          step3_failure: "Failure...",
           step3_subtext_success:
-            "Your storefront has been updated according to the uploaded file. If not all lines have been unloaded, it means that these products are not in our database. We will analyze the result and add them in the near future.",
+          "Your storefront has been updated according to the uploaded file. If not all lines have been unloaded, it means that these products are not in our database. We will analyze the result and add them in the near future.",
+          step3_failure: "Failure...",
           step3_subtext_failure:
             "The file format does not match the format we configured to accept your catalog, please try another file or contact stores@vapeapp.net.",
+          step3_timeout: "The one-time password has expired",
+          step3_subtext_timeout: "The file upload has not been confirmed within 5 minutes after upload. Please try again.",
           step3_next: "Done",
         },
       },

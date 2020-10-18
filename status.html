@@ -26,6 +26,9 @@
       <p class="lqd-box__text" data-translate="step2_text"></p>
       <p class="lqd-box__subtext" data-translate="step2_subtext"></p>
 
+      <!-- TODO countdown -->
+      <p id="countdown"></p>
+
       <div class="password-display">
         <span class="password-display__text" id="password_display"></span>
       </div>
@@ -39,11 +42,14 @@
       </div>
 
       <h1 class="lqd-box__header" data-translate="step3"></h1>
-      <p class="lqd-box__text success-text">
-        <span class="text-highlight" id="line_count">69/42</span>
-        <span data-translate="step3_linecount"></span>
-      </p>
-      <!-- TODO expandable table -->
+      <!-- TODO custom triangle (or not) -->
+      <details>
+        <summary class="lqd-box__text success-text">
+          <span class="text-highlight" id="line_count">69/42</span>
+          <span data-translate="step3_linecount"></span>
+        </summary>
+        <table class="results-table" id="results_table"></table>
+      </details>
 
       <p class="lqd-box__subtext" data-translate="step3_subtext_success"></p>
       <button
@@ -70,6 +76,23 @@
         data-translate="step3_subtext_failure"
         id="email_text"
       ></p>
+      <button
+        class="lqd-box__bottom-btn lqd-button"
+        data-translate="step3_next"
+        onclick="start_over()"
+      ></button>
+    </div>
+
+    <!-- step 3 - timeout -->
+    <div class="lqd-box hidden" id="box_step3_timeout">
+      <div class="lqd-box__step">
+        <img class="lqd-box__step__icon" src="./res/lqd-logo.svg" />
+        <span class="lqd-box__step__text">4/4</span>
+      </div>
+
+      <h1 class="lqd-box__header" data-translate="step3"></h1>
+      <p class="lqd-box__text" data-translate="step3_timeout"></p>
+      <p class="lqd-box__subtext" data-translate="step3_subtext_timeout"></p>
       <button
         class="lqd-box__bottom-btn lqd-button"
         data-translate="step3_next"
