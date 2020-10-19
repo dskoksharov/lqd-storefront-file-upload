@@ -42,6 +42,21 @@ function showBox(boxName) {
 }
 
 /**
+ * Updates timer text. Handles only minutes and seconds.
+ * @param {*} timeLeft number of milliseconds left
+ */
+function updateTimerText(timeLeft) {
+  const minutes = Math.floor(timeLeft / (60 * 1000));
+  const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
+
+  document.getElementById(
+    "countdown"
+  ).textContent = `${minutes
+    .toString()
+    .padStart(2, 0)}:${seconds.toString().padStart(2, 0)}`;
+}
+
+/**
  * Fills the #results_table with given rows data.
  * @param {{row: number; name: string; amount: number; price: number, status: string}[]} rows
  */
@@ -100,8 +115,22 @@ window.addEventListener("DOMContentLoaded", () => {
   // begin polling backend with the password
   let countdownIntervalId, statusPollId, statusPollTimeoutId;
 
-  // TODO countdown timer
-  // const targetDate =
+  // countdown timer
+  const targetDate = new Date(
+    Date.now() + LQDGlobalConf.uploadStatusInvalidationTimeout
+  );
+  countdownIntervalId = setInterval(() => {
+    const timeLeft = targetDate.getTime() - new Date().getTime();
+    if (timeLeft > 0) {
+      updateTimerText(timeLeft);
+    } else {
+      updateTimerText(0);
+      clearInterval(countdownIntervalId);
+      clearInterval(statusPollId);
+      clearTimeout(statusPollTimeoutId);
+      showBox("box_step3_timeout");
+    }
+  }, 1000);
 
   statusPollTImeoutId = setTimeout(() => {
     // clear interval if still unconfirmed (if confirmed, this timeout is cleared)
@@ -126,6 +155,7 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("Got response", data);
 
     if (!resp.ok) {
+      clearInterval(countdownIntervalId);
       clearInterval(statusPollId);
       clearTimeout(statusPollTimeoutId);
 
@@ -155,6 +185,7 @@ window.addEventListener("DOMContentLoaded", () => {
         data.status === "Uploaded" ||
         data.status === "Uploaded with errors"
       ) {
+        clearInterval(countdownIntervalId);
         clearInterval(statusPollId);
         clearTimeout(statusPollTimeoutId);
 
