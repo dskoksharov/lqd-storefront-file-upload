@@ -152,8 +152,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const data = await resp.json();
 
-    console.log("Got response", data);
-
     if (!resp.ok) {
       clearInterval(countdownIntervalId);
       clearInterval(statusPollId);
