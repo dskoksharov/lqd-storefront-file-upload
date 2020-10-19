@@ -38,12 +38,17 @@
   margin-block-end: 10px;
 }
 
+.scroll-container {
+  max-height: 50vh;
+  overflow-y: auto;
+
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+}
+
 .results-table {
   width: 100%;
   text-align: left;
-
-  min-height: 40vh;
-  overflow-y: auto;
 }
 
 .results-table__status-icon {

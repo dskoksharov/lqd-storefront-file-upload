@@ -41,6 +41,48 @@ function showBox(boxName) {
   });
 }
 
+/**
+ * Fills the #results_table with given rows data.
+ * @param {{row: number; name: string; amount: number; price: number, status: string}[]} rows
+ */
+function fillTable(rows) {
+  rows.sort((a, b) => a.row - b.row);
+
+  const table = document.getElementById("results_table");
+  rows
+    .map((d) => {
+      // create table row for each file line result
+      const tr = document.createElement("tr");
+      if (d.error) {
+        tr.setAttribute("title", d.error);
+      }
+
+      const columns = [d.row, d.name, d.amount, d.price];
+
+      columns.forEach((c) => {
+        const td = document.createElement("td");
+        td.textContent = c;
+        tr.append(td);
+      });
+
+      // add status icon manually
+      const tdstatus = document.createElement("td");
+      const imgstatus = document.createElement("img");
+      imgstatus.setAttribute(
+        "src",
+        d.status === "error" ? "./res/error.svg" : "./res/success.svg"
+      );
+      imgstatus.classList.add("results-table__status-icon");
+      tdstatus.append(imgstatus);
+      tr.append(tdstatus);
+
+      return tr;
+    })
+    .forEach((tr) => {
+      table.append(tr);
+    });
+}
+
 // init everything
 window.addEventListener("DOMContentLoaded", () => {
   // init steps
@@ -121,37 +163,7 @@ window.addEventListener("DOMContentLoaded", () => {
         ).textContent = `${data.success_cnt}/${data.all_cnt}`;
 
         // fill table
-        const table = document.getElementById("results_table");
-        data.data
-          .map((d) => {
-            // create table row for each file line result
-            const tr = document.createElement("tr");
-            if (d.error) {
-              tr.setAttribute("title", d.error);
-            }
-
-            const columns = [d.row, d.name, d.amount, d.price];
-
-            columns.forEach((c) => {
-              const td = document.createElement("td");
-              td.textContent = c;
-              tr.append(td);
-            });
-
-            // add status icon manually
-            const tdstatus = document.createElement("td");
-            const imgstatus = document.createElement("img");
-            imgstatus.setAttribute(
-              "src",
-              d.status === "error" ? "./res/error.svg" : "./res/success.svg"
-            );
-            imgstatus.classList.add("results-table__status-icon");
-            tdstatus.append(imgstatus);
-            tr.append(tdstatus);
-          })
-          .forEach((tr) => {
-            table.append(tr);
-          });
+        fillTable(data.data);
 
         showBox("box_step3_success");
       }
