@@ -1,0 +1,31 @@
+{
+  "title_upload": "Upload Storefront File",
+
+  "step0": "Step 0",
+  "step0_text": "Contact stores@vapeapp.net to onboard your store",
+  "step0_subtext": "Once your store is onboarded, proceed to the next step.",
+  "step0_next": "Next",
+
+  "step1": "Step 1",
+  "step1_text": "Select a relevant product catalog file on your device and upload it.",
+  "step1_file": "Choose file...",
+  "step1_subtext_pre": "Attention!",
+  "step1_subtext": "All products that are not in the file will be removed from your storefront.",
+  "step1_next": "Upload",
+  "upload_error": "An error has occured",
+
+  "title_status": "Upload Status",
+
+  "step2": "Step 2",
+  "step2_text": "Enter the one-time password inside the application.",
+  "step2_subtext": "Do not close this page to see the upload status",
+
+  "step3": "Step 3",
+  "step3_linecount": "lines uploaded",
+  "step3_subtext_success": "Your storefront has been updated according to the uploaded file. If not all lines have been unloaded, it means that these products are not in our database. We will analyze the result and add them in the near future.",
+  "step3_failure": "Failure...",
+  "step3_subtext_failure": "The file format does not match the format we configured to accept your catalog, please try another file or contact stores@vapeapp.net.",
+  "step3_timeout": "The one-time password has expired",
+  "step3_subtext_timeout": "The file upload has not been confirmed within 5 minutes after upload. Please try again.",
+  "step3_next": "Done"
+}
