@@ -1,0 +1,21 @@
+{
+  "name": "lqd-storefront-file-upload",
+  "version": "1.0.0",
+  "description": "LQD storefront upload web interface as a static website.",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Dummy build'",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskoksharov/lqd-storefront-file-upload.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dskoksharov/lqd-storefront-file-upload/issues"
+  },
+  "homepage": "https://github.com/dskoksharov/lqd-storefront-file-upload#readme"
+}
