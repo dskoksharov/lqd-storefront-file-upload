@@ -160,8 +160,16 @@ input[type="file"] {
   );
 }
 
+.lqd-button:hover {
+  cursor: pointer;
+}
+
 .lqd-button--disabled {
   background: #979797;
+}
+
+.lqd-button--disabled:hover {
+  cursor: not-allowed;
 }
 
 /* Text accented with color */
