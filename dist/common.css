@@ -102,6 +102,10 @@ input[type="file"] {
   width: 25px;
   height: 25px;
   margin: 5px;
+
+  background-image: url("./res/lqd-logo.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .lqd-box__step__text {
