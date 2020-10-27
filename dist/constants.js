@@ -5,8 +5,8 @@ window.LQDGlobalConf = {
    * Backend url (no trailing slash - paths are manually concatenated)
    */
   // TODO change to prod backend
-  backendUrl: "http://3.129.104.96:8080", // test backend
-  // backendUrl: "http://3.129.157.184:8080" // prod backend
+  backendUrl: "https://3.129.104.96:8443", // test backend
+  // backendUrl: "https://3.129.157.184:8080" // prod backend
 
   /**
    * The interval (ms) with which the upload status is polled.
