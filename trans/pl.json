@@ -22,5 +22,6 @@
   "step3_subtext_failure": "Format pliku nie pasuje do formatu mamy skonfigurowany, aby zaakceptować swój katalog, spróbuj innego pliku lub kontaktów stores@vapeapp.net.",
   "step3_timeout": "Hasło jednorazowe wygasła",
   "step3_subtext_timeout": "Plik do przesłania nie została potwierdzona w ciągu 5 minut po przesłaniu. Proszę spróbuj ponownie.",
-  "step3_next": "Gotowy"
+  "step3_next": "Gotowy",
+  "step1_subsubtext": "Nie wiem, w jaki sposób mogę pobrać plik"
 }

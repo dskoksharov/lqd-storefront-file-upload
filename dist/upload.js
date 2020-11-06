@@ -1,3 +1,5 @@
+const LS_STEP0_SHOWN = "LS_STEP0_SHOWN";
+
 // translations
 document.addEventListener("document_translated", () => {
   // change email in step0_text to anchor and highlight
@@ -17,8 +19,14 @@ document.addEventListener("document_translated", () => {
 // init everything
 window.addEventListener("DOMContentLoaded", () => {
   // init steps
-  document.getElementById("box_step0").classList.remove("hidden");
-  document.getElementById("box_step1").classList.add("hidden");
+  const step0Shown = localStorage.getItem(LS_STEP0_SHOWN);
+  if (step0Shown) {
+    document.getElementById("box_step0").classList.add("hidden");
+    document.getElementById("box_step1").classList.remove("hidden");
+  } else {
+    document.getElementById("box_step0").classList.remove("hidden");
+    document.getElementById("box_step1").classList.add("hidden");
+  }
 
   // file input
   document.getElementById("file_input").addEventListener("change", (e) => {
@@ -50,6 +58,7 @@ window.addEventListener("DOMContentLoaded", () => {
  * Advance step from 0 to 1
  */
 function step0_next() {
+  localStorage.setItem(LS_STEP0_SHOWN, "true");
   document.getElementById("box_step0").classList.add("hidden");
   document.getElementById("box_step1").classList.remove("hidden");
 }
@@ -88,4 +97,16 @@ async function upload() {
 
   // redirect to status
   location.assign(`status.html?password=${password}`);
+}
+
+function goToStep0(e) {
+  e.preventDefault();
+  console.log("Going to step 0");
+
+  // clear flag
+  localStorage.removeItem(LS_STEP0_SHOWN);
+
+  // show step 0
+  document.getElementById("box_step0").classList.remove("hidden");
+  document.getElementById("box_step1").classList.add("hidden");
 }

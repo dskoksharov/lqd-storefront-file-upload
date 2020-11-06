@@ -22,5 +22,6 @@
   "step3_subtext_failure": "El formato de archivo no coincide con el formato que configura para aceptar su catálogo, por favor intente otro archivo o contacto stores@vapeapp.net.",
   "step3_timeout": "La contraseña de una sola vez ha expirado",
   "step3_subtext_timeout": "La carga de archivos no ha sido confirmada dentro de los 5 minutos después de la carga. Inténtalo de nuevo.",
-  "step3_next": "Hecho"
+  "step3_next": "Hecho",
+  "step1_subsubtext": "No sé cómo puedo descargar el archivo"
 }

@@ -22,5 +22,6 @@
   "step3_subtext_failure": "Das Dateiformat nicht das Format passen wir konfiguriert Ihren Katalog zu akzeptieren, versuchen Sie bitte eine andere Datei oder kontaktieren Sie stores@vapeapp.net.",
   "step3_timeout": "Das Einmal-Passwort ist abgelaufen",
   "step3_subtext_timeout": "Der Datei-Upload ist nicht innerhalb von 5 Minuten nach dem Upload bestätigt. Bitte versuche es erneut.",
-  "step3_next": "Erledigt"
+  "step3_next": "Erledigt",
+  "step1_subsubtext": "Ich weiß nicht, wie lade ich die Datei"
 }

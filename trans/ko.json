@@ -22,5 +22,6 @@
   "step3_subtext_failure": "우리는 당신의 카탈로그를 허용하도록 구성 형식과 일치하지 않는 파일 형식은 다른 파일 또는 연락처 stores@vapeapp.net을 시도하십시오.",
   "step3_timeout": "일회성 암호가 만료되었습니다",
   "step3_subtext_timeout": "파일 업로드 업로드 후 약 5 분 내에 확인되지 않았습니다. 다시 시도하십시오.",
-  "step3_next": "끝난"
+  "step3_next": "끝난",
+  "step1_subsubtext": "나는 파일을 다운로드하는 방법을 모른다"
 }
