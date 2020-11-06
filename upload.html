@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- step 0 -->
-    <div class="lqd-box" id="box_step0">
+    <div class="lqd-box hidden" id="box_step0">
       <div class="lqd-box__step">
         <div class="lqd-box__step__icon"></div>
         <span class="lqd-box__step__text">1/4</span>
@@ -72,6 +72,11 @@
         data-translate="step1_next"
         onclick="upload()"
       ></button>
+      <a
+        class="lqd-box__subsubtext text-highlight"
+        data-translate="step1_subsubtext"
+        onclick="goToStep0(event)"
+      ></a>
     </div>
   </body>
 </html>

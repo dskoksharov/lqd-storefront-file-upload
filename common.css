@@ -136,6 +136,14 @@ input[type="file"] {
   margin-block-end: 1em;
 }
 
+.lqd-box__subsubtext {
+  font-size: 10px;
+  font-weight: 500;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 /* LQD button with a gradient */
 .lqd-button {
   display: inline-block;

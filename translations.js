@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_subtext_pre: "Attention!",
           step1_subtext:
             "All products that are not in the file will be removed from your storefront.",
+          step1_subsubtext: "I don't know what file to upload",
           step1_next: "Upload",
           upload_error: "An error has occured",
 
@@ -64,6 +65,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_subtext_pre: "Beachtung!",
           step1_subtext:
             "Alle Produkte, die nicht in der Datei werden von Ihrem Schaufenster entfernt werden.",
+          step1_subsubtext: "Ich weiß nicht, wie lade ich die Datei",
           step1_next: "Hochladen",
           upload_error: "Ein Fehler ist aufgetreten",
           title_status: "Upload-Status",
@@ -99,6 +101,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_subtext_pre: "¡Atención!",
           step1_subtext:
             "Todos los productos que no están en el archivo serán removidos de su tienda.",
+          step1_subsubtext: "No sé cómo puedo descargar el archivo",
           step1_next: "Subir",
           upload_error: "Se ha producido un error",
           title_status: "Estado de la subida",
@@ -131,6 +134,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_file: "파일을 선택...",
           step1_subtext_pre: "주의!",
           step1_subtext: "파일에없는 모든 제품은 매장에서 제거됩니다.",
+          step1_subsubtext: "나는 파일을 다운로드하는 방법을 모른다",
           step1_next: "업로드",
           upload_error: "오류가 발생했습니다",
           title_status: "업로드 상태",
@@ -165,6 +169,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_subtext_pre: "Uwaga!",
           step1_subtext:
             "Wszystkie produkty, które nie są w pliku zostaną usunięte z Twojego sklepu.",
+          step1_subsubtext: "Nie wiem, w jaki sposób mogę pobrać plik",
           step1_next: "Przekazać plik",
           upload_error: "Wystąpił błąd",
           title_status: "Stan przesyłania",
@@ -201,6 +206,7 @@ window.addEventListener("DOMContentLoaded", async () => {
           step1_subtext_pre: "Внимание!",
           step1_subtext:
             "Все продукты, которые не включены в файл будет удалены из вашего магазина.",
+          step1_subsubtext: "Я не знаю какой файл мне загрузить",
           step1_next: "Загрузить",
           upload_error: "Произошла ошибка",
           title_status: "Статус загрузки",
