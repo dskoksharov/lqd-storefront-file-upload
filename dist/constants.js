@@ -5,7 +5,7 @@ window.LQDGlobalConf = {
    * Backend url (no trailing slash - paths are manually concatenated)
    */
   // TODO change to prod backend
-  backendUrl: "https://dev.app.vapeapp.net:8443", // test backend
+  backendUrl: "https://test.app.vapeapp.net:8443", // test backend
   // backendUrl: "https://3.129.157.184:8080" // prod backend
 
   /**
