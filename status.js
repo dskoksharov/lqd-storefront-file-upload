@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // expecting `password` param in querystring
   const password = new URLSearchParams(location.search).get("password");
   if (password == null) {
-    location.replace("upload.html");
+    location.replace("index.html");
   } else {
     document.getElementById("password_display").textContent = password;
   }
@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // unknown password - redirect to upload page
       if (resp.status === 404 && data.message === "Password is wrong") {
-        location.replace("upload.html");
+        location.replace("index.html");
       }
 
       // parsing failure
@@ -211,5 +211,5 @@ window.addEventListener("DOMContentLoaded", () => {
  * Return to upload page.
  */
 function start_over() {
-  location.assign("upload.html");
+  location.assign("index.html");
 }
