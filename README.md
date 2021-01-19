@@ -7,3 +7,15 @@
 Файл конфигурации для веб-интерфейса находится в файле `constants.js`. Среди параметров присутствует урл бекенда.
 
 Для удобства изменения и генерации переводы были разбросаны по своим языковым файлам в папке trans. Переводы, непосредственно использующиеся веб-интерфейсом, находятся в файле `translations.js` - при изменении переводов их необходимо дублировать туда вручную.
+
+## Deploy
+
+```
+# split changes from the `dist/` dir of the current branch into `gh-pages` branch
+git subtree split --branch gh-pages --prefix dist/
+
+# force push local `gh-pages` branch to the respective remote branch
+git push -f origin gh-pages:gh-pages
+```
+
+Релевантный gist: https://gist.github.com/tduarte/eac064b4778711b116bb827f8c9bef7b
